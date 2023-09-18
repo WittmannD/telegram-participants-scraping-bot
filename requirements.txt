@@ -1,0 +1,6 @@
+aiohttp==3.8.5
+asyncio==3.4.3
+cryptg==0.4.0
+python-dotenv==1.0.0
+rsa==4.9
+Telethon==1.30.3
