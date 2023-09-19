@@ -80,7 +80,7 @@ async def chat_link_listener_handler(event: events.NewMessage.Event):
             try:
                 await event.reply('Починаю збір учасників. Це може зайняти деякий час...')
 
-                if not chat.megagroup:
+                if hasattr(chat, 'megagroup') and not chat.megagroup:
                     await event.client.send_message(event.message.peer_id,
                                                     'За цим посиланням виявлено канал. Збір учасників буде здійснено в чаті каналу '
                                                     f'за повідомленнями. Максимум {current_config.MESSAGES_NUMBER_FOR_SCRAPING} повідомлень')

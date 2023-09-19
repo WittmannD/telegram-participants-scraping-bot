@@ -3,7 +3,8 @@ from contextlib import asynccontextmanager
 from telethon import types
 from telethon.errors import rpcerrorlist
 from telethon.tl.functions.channels import JoinChannelRequest, LeaveChannelRequest
-from telethon.tl.functions.messages import ImportChatInviteRequest
+from telethon.tl.functions.messages import DeleteChatUserRequest, ImportChatInviteRequest
+from telethon.tl.types import InputPeerChat
 from telethon.utils import parse_username
 
 from src.common.config import current_config
@@ -34,7 +35,7 @@ class Agent:
 
         finally:
             if chat_entity:
-                await client(LeaveChannelRequest(chat_entity))
+                await client.delete_dialog(chat_entity)
 
     @classmethod
     async def collect_group_participants(cls, client, chat, fields: list[str], file, amount: int):
