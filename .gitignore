@@ -2,3 +2,5 @@ venv
 test
 *.session
 *.env
+__pycache__
+.idea
