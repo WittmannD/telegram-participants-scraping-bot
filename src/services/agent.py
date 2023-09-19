@@ -1,13 +1,13 @@
 from contextlib import asynccontextmanager
 
-from telethon import events, types
+from telethon import types
 from telethon.errors import rpcerrorlist
 from telethon.tl.functions.channels import JoinChannelRequest, LeaveChannelRequest
 from telethon.tl.functions.messages import ImportChatInviteRequest
 from telethon.utils import parse_username
 
 from src.common.config import current_config
-from src.common.helpers import csv_context, pick_user_fields
+from src.common.helpers import pick_user_fields
 
 
 class Agent:

@@ -1,4 +1,4 @@
-from telethon import events, sessions, types
+from telethon import types
 
 from src.common.connections import bot
 from src.common.enums import Command

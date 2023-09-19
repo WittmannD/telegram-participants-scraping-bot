@@ -1,11 +1,8 @@
-import os.path
-
-from telethon import events, utils, types
+from telethon import events
 from telethon.errors import rpcerrorlist
-from telethon.tl.functions.channels import GetParticipantsRequest
 
 from src.common.config import current_config
-from src.common.connections import agent_client, bot, client
+from src.common.connections import agent_client, bot
 from src.common.enums import Command
 from src.common.helpers import step_filter, tmp_csv_context
 from src.services.agent import Agent

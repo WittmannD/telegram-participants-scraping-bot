@@ -1,14 +1,7 @@
 import csv
 from contextlib import contextmanager, asynccontextmanager
 from tempfile import NamedTemporaryFile
-
-from telethon.errors import rpcerrorlist
-from telethon.tl.functions.channels import JoinChannelRequest, LeaveChannelRequest
-from telethon.tl.functions.messages import ImportChatInviteRequest
-from telethon.utils import parse_username
-from telethon import events, types
-
-from src.common.config import current_config
+from telethon import events
 
 
 def step_filter(steps: list[str]):
@@ -62,4 +55,3 @@ def csv_context(filename):
     finally:
         if file:
             file.close()
-
