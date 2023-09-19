@@ -13,8 +13,12 @@ TELEGRAM_PHONE_NUMBER=+321123456789
 ```
 ```shell
 cd participants-telegram-scraping-bot
+# setup virtual environment
 python3 -m venv venv
+source venv/bin/activate
+# install deps and run app
 python3 -m pip install -r requriments.txt
+python3 main.py
 ```
 ### Run using Docker
 ```shell
